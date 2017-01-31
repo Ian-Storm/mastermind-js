@@ -1,0 +1,16 @@
+body {
+	background-color: blue;
+}
+
+.master1, .master2, .master3, .master4 {
+	background-color: orange;
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	margin-right: 10px;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+}
