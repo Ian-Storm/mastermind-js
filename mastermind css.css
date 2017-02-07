@@ -2,6 +2,11 @@ body {
 	background-color: blue;
 }
 
+main {
+width: 1300px;
+height: 100%;	
+}
+
 .master1, .master2, .master3, .master4 {
 	background-color: orange;
 	width: 60px;
@@ -10,7 +15,38 @@ body {
 	margin-right: 10px;
 }
 
+.dot1, .dot2, .dot3, .dot4 {
+	background-color: purple;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin-right: 10px;
+}
+
 section {
 	display: flex;
 	flex-direction: row;
+}
+
+.smrow1, .smrow2, .smrow3, .smrow4, 
+.smrow5, .smrow6, .smrow7, .smrow8, 
+.smrow9, .smrow10, .smrow11, .smrow12, {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.smdot1, .smdot2, .smdot3, .smdot4 {
+	background-color: green;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	margin: 1 auto;
+}
+
+.player {
+	width: 50px;
+	height: 50px;
 }
