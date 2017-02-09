@@ -3,7 +3,7 @@ body {
 }
 
 main {
-width: 1300px;
+width: 100%;
 height: 100%;	
 }
 
@@ -24,8 +24,7 @@ height: 100%;
 }
 
 section {
-	display: flex;
-	flex-direction: row;
+	display: inline-block;
 }
 
 .smrow1, .smrow2, .smrow3, .smrow4, 
@@ -33,9 +32,6 @@ section {
 .smrow9, .smrow10, .smrow11, .smrow12, {
 	width: 30px;
 	height: 30px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 }
 
 .smdot1, .smdot2, .smdot3, .smdot4 {
@@ -47,6 +43,33 @@ section {
 }
 
 .player {
+	position: relative;
 	width: 50px;
 	height: 50px;
+}
+
+.smdot1, .smdot2 {
+	position: relative;
+	background-color: white;
+	bottom: 15px;
+}
+
+.smdot3, .smdot4 {
+	position: relative;
+	right: 38px;
+}
+
+button {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	position: absolute;
+}
+
+#color1 {
+	background-color: red;
+}
+
+#color2 {
+	background-color: yellow;
 }
