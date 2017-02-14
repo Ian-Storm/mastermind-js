@@ -1,4 +1,4 @@
-var color = ["red", "yellow", "blue", "limegreen", "brown", "pink"];
+var color = ["red", "yellow", "blue", "limegreen", "brown", "cyan"];
 
 function player() {
 	

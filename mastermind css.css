@@ -72,4 +72,25 @@ button {
 
 #color2 {
 	background-color: yellow;
+	left: 50px;
+}
+
+#color3{
+	background-color: blue;
+	left: 100px;
+}
+
+#color4 {
+	background-color: limegreen;
+	left: 150px;
+}
+
+#color5 {
+	background-color: brown;
+	left: 200px;
+}
+
+#color6 {
+	background-color: cyan;
+	left: 250px;
 }
