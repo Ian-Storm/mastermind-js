@@ -1,5 +1,5 @@
 body {
-	background-color: blue;
+	background-color: goldenrod;
 }
 
 main {
@@ -64,6 +64,7 @@ button {
 	height: 50px;
 	border-radius: 100%;
 	position: absolute;
+	border: none;
 }
 
 #color1 {
