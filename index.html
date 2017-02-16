@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<script src="mastermind js.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="gencode();">
 <main>
 	<section class="master">
 		<section class="master1"></section>
@@ -172,12 +172,12 @@
 	</section>
 <br>
 	<section class="player">
-		<button id="color1"></button>
-		<button id="color2"></button>
-		<button id="color3"></button>
-		<button id="color4"></button>
-		<button id="color5"></button>
-		<button id="color6"></button>
+		<button id="color1" onclick="addcolor('red');"></button>
+		<button id="color2" onclick="addcolor('yellow');"></button>
+		<button id="color3" onclick="addcolor('blue');"></button>
+		<button id="color4" onclick="addcolor('limegreen');"></button>
+		<button id="color5" onclick="addcolor('brown');"></button>
+		<button id="color6" onclick="addcolor('cyan');"></button>
 	</section>
 </main>
 </body>
