@@ -22,4 +22,4 @@ function addcolor(color) {
 	playedcode.push (color);
 	var x = document.getElementsByClassName("dot1");
 	console.log(x);
-}
+} 
