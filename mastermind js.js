@@ -1,7 +1,7 @@
 var color = ["red", "yellow", "blue", "limegreen", "brown", "cyan"];
 var code = [];
 var ball = 1;
-var row = 1;
+var row = 11;
 var playedcode = [];
 
 function gencode() {
@@ -20,6 +20,13 @@ function gencode() {
 
 function addcolor(color) {
 	playedcode.push (color);
-	var x = document.getElementsByClassName("dot1");
-	console.log(x);
+	var x = document.getElementsByClassName("dot" + ball);
+	if (ball <= 4) {
+		x[row].style.backgroundColor = color;
+		ball++;
+	} else {
+		row--;
+		ball = 1;
+		addcolor(color);
+	}
 } 
