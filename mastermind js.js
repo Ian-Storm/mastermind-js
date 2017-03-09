@@ -30,3 +30,11 @@ function addcolor(color) {
 		addcolor(color);
 	}
 } 
+
+function awnser() {
+	
+	for (var i = 1; i < 5; i++) {
+		var x = document.getElementsByClassName("master" + i);
+		x[0].style.backgroundColor = code[i - 1];
+	}
+}
