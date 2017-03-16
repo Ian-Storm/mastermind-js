@@ -25,9 +25,15 @@ function addcolor(color) {
 		x[row].style.backgroundColor = color;
 		ball++;
 	} else {
+		if (row !=0) {
 		row--;
 		ball = 1;
 		addcolor(color);
+	} else {
+		console.log("Game Over!");
+		awnser();
+		document.getElementById("Game Over!").innerHTML = "Game Over!";
+		}
 	}
 } 
 
