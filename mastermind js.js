@@ -26,16 +26,15 @@ function addcolor(color) {
 		ball++;
 	} else {
 		if (row !=0) {
-		row--;
-		ball = 1;
-		addcolor(color);
-	} else if {
-		if (code = true) {
-		console.log("You Win!");
-	} else {
-		console.log("Game Over!");
-		awnser();
-		document.getElementById("Game Over!").innerHTML = "Game Over!";
+			row--;
+			ball = 1;
+			addcolor(color);
+		} else if (playedcode = true) {
+			console.log("You Win!")
+		} else {
+			console.log("Game Over!");
+			awnser();
+			document.getElementById("Game Over!").innerHTML = "Game Over!";
 		}
 	}
 } 
