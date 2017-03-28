@@ -29,6 +29,9 @@ function addcolor(color) {
 		row--;
 		ball = 1;
 		addcolor(color);
+	} else if {
+		if (code = true) {
+		console.log("You Win!");
 	} else {
 		console.log("Game Over!");
 		awnser();
