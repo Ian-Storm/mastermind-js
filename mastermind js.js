@@ -28,21 +28,34 @@ function addcolor(color) {
 		if (row !=0) {
 			row--;
 			ball = 1;
+			checkanswer();
 			addcolor(color);
-		} else if (playedcode = true) {
-			console.log("You Win!")
 		} else {
 			console.log("Game Over!");
-			awnser();
+			answer();
 			document.getElementById("Game Over!").innerHTML = "Game Over!";
 		}
 	}
 } 
 
-function awnser() {
-	
+function answer() {
 	for (var i = 1; i < 5; i++) {
 		var x = document.getElementsByClassName("master" + i);
 		x[0].style.backgroundColor = code[i - 1];
+	}
+}
+
+function checkanswer() {
+	var correctposition = 0;
+	for (var i = 0; i < 4; i++) {
+		if (playedcode[i] == gencode[i]) {
+			correctposition +=1;
+			console.log(correctposition);
+		}
+	}
+	if (correctposition == 4) {
+		console.log("You Win!");
+		answer();
+		document.getElementById("Game Over!").innerHTML = "You Win!";
 	}
 }
