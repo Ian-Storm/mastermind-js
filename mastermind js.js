@@ -21,14 +21,18 @@ function gencode() {
 function addcolor(color) {
 	playedcode.push (color);
 	var x = document.getElementsByClassName("dot" + ball);
-	if (ball <= 4) {
+	if (ball < 4) {
 		x[row].style.backgroundColor = color;
 		ball++;
+	} else if(ball == 4) {
+		x[row].style.backgroundColor = color;
+		ball++;
+		checkanswer();
 	} else {
 		if (row !=0) {
 			row--;
 			ball = 1;
-			checkanswer();
+			playedcode = [];
 			addcolor(color);
 		} else {
 			console.log("Game Over!");
@@ -48,10 +52,24 @@ function answer() {
 function checkanswer() {
 	var correctposition = 0;
 	for (var i = 0; i < 4; i++) {
-		if (playedcode[i] == gencode[i]) {
+		if (playedcode[i] == code[i]) {
 			correctposition +=1;
 			console.log(correctposition);
 		}
+	}
+	switch(correctposition) {
+		case 1:
+			//color
+			break;
+		case 2:
+			//color
+			break;
+		case 3:
+			//color
+			break;
+		case 4:
+			//color
+			break;
 	}
 	if (correctposition == 4) {
 		console.log("You Win!");
