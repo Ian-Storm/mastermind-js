@@ -51,26 +51,43 @@ function answer() {
 
 function checkanswer() {
 	var correctposition = 0;
+	var hint;
 	for (var i = 0; i < 4; i++) {
 		if (playedcode[i] == code[i]) {
 			correctposition +=1;
 			console.log(correctposition);
 		}
 	}
+
 	switch(correctposition) {
 		case 1:
-			//color
+			for (hint = 1; hint <= correctposition; hint++) {
+				var x = document.getElementsByClassName("smdot" + hint);
+				x[row].style.backgroundColor = "black";
+			}
 			break;
 		case 2:
-			//color
+			for (hint = 1; hint <= correctposition; hint++) {
+				var x = document.getElementsByClassName("smdot" + hint);
+				x[row].style.backgroundColor = "black";
+			}
 			break;
 		case 3:
-			//color
+			for (hint = 1; hint <= correctposition; hint++) {
+				var x = document.getElementsByClassName("smdot" + hint);
+				x[row].style.backgroundColor = "black";
+			}
 			break;
 		case 4:
-			//color
+			for (hint = 1; hint <= correctposition; hint++) {
+				var x = document.getElementsByClassName("smdot" + hint);
+				x[row].style.backgroundColor = "black";
+			}
 			break;
 	}
+
+
+
 	if (correctposition == 4) {
 		console.log("You Win!");
 		answer();
