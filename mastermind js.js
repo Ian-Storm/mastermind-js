@@ -4,6 +4,10 @@ var ball = 1;
 var row = 11;
 var playedcode = [];
 
+function restart() {
+	location.reload(true);
+}
+
 function gencode() {
 	var number;
 	var i;
@@ -85,8 +89,6 @@ function checkanswer() {
 			}
 			break;
 	}
-
-
 
 	if (correctposition == 4) {
 		console.log("You Win!");
