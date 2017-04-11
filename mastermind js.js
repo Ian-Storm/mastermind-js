@@ -1,4 +1,4 @@
-var color = ["red", "yellow", "blue", "limegreen", "brown", "cyan"];
+const color = ["red", "yellow", "blue", "limegreen", "brown", "cyan"];
 var code = [];
 var ball = 1;
 var row = 11;
@@ -56,43 +56,31 @@ function answer() {
 function checkanswer() {
 	var correctposition = 0;
 	var hint;
-	for (var i = 0; i < 4; i++) {
-		if (playedcode[i] == code[i]) {
-			correctposition +=1;
-			console.log(correctposition);
-		}
-	}
 
-	switch(correctposition) {
-		case 1:
-			for (hint = 1; hint <= correctposition; hint++) {
-				var x = document.getElementsByClassName("smdot" + hint);
-				x[row].style.backgroundColor = "black";
-			}
-			break;
-		case 2:
-			for (hint = 1; hint <= correctposition; hint++) {
-				var x = document.getElementsByClassName("smdot" + hint);
-				x[row].style.backgroundColor = "black";
-			}
-			break;
-		case 3:
-			for (hint = 1; hint <= correctposition; hint++) {
-				var x = document.getElementsByClassName("smdot" + hint);
-				x[row].style.backgroundColor = "black";
-			}
-			break;
-		case 4:
-			for (hint = 1; hint <= correctposition; hint++) {
-				var x = document.getElementsByClassName("smdot" + hint);
-				x[row].style.backgroundColor = "black";
-			}
-			break;
-	}
-
-	if (correctposition == 4) {
+	if (playedcode[0] === code[0] &&
+		playedcode[1] === code[1] &&
+		playedcode[2] === code[2] &&
+		playedcode[3] === code[3]) {
 		console.log("You Win!");
 		answer();
 		document.getElementById("Game Over!").innerHTML = "You Win!";
+		for (var a = 0; a < 4; a++) {
+			document.querySelector(`.row${12-row} .smrow${12-row} .smdot${a + 1}`).style.backgroundColor = "black";
+		}
+	} else {
+		for (var a = 0; a < 4; a++) {
+			if (playedcode[a] === code[0] || 
+				playedcode[a] === code[1] ||
+				playedcode[a] === code[2] ||
+				playedcode[a] === code[3]) {
+				if (playedcode[a] === code[a]) {
+					document.querySelector(`.row${12-row} .smrow${12-row} .smdot${a + 1}`).style.backgroundColor = "black";
+				} else {
+					document.querySelector(`.row${12-row} .smrow${12-row} .smdot${a + 1}`).style.backgroundColor = "white";
+				}
+			} else {
+				console.log("not in");
+			}
+		}
 	}
 }
